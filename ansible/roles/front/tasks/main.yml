@@ -1,0 +1,12 @@
+---
+# tasks file for roles/front
+
+- name: Run Front container
+  docker_container:
+    name: front
+    image: bigboypro/tp-devops-front:latest
+    pull: true
+    networks:
+      - name: app-network
+    state: started
+    restart_policy: unless-stopped
