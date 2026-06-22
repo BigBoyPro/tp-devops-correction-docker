@@ -9,6 +9,6 @@
     networks:
       - name: app-network
     env:
-      POSTGRES_PASSWORD: pwd
+      POSTGRES_PASSWORD: "{{ vault_postgres_password }}"
     state: started
     restart_policy: unless-stopped

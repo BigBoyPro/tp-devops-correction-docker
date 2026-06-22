@@ -10,6 +10,6 @@
       - name: app-network
     env:
       DATABASE_HOST: database
-      DATABASE_PASSWORD: pwd
+      DATABASE_PASSWORD: "{{ vault_database_password }}"
     state: started
     restart_policy: unless-stopped
